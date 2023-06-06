@@ -22,7 +22,6 @@ class Videogame(App):
         Window.rotation = 0
         self.personaje=AsyncImage(source="./images/0.png",pos=(100,100))
         self.obstaculo=AsyncImage(source="./images/rock.png", pos=(0,0))
-        self.buton10=Button(text="prueba", color=("blue"),size_hint=(None, None), size=(64, 64), pos_hint={'x':0.5,'y':0.5})
         self.button_Arriba=Button(text="Arriba",color=("black"),size_hint=(0.06,0.1),pos_hint={'x':0.12,'y':0.3},background_color=("blue"))
         self.button_Arriba.bind(on_press=self.Arriba)
         self.button_Arriba.bind(on_release=self.Arriba1)
@@ -51,8 +50,6 @@ class Videogame(App):
 
         return layout#retorna la pantalla
     def update(self, dt):
-        x=0
-        y=0
         if self.direccion=="derecha":
             x+=10
         elif self.direccion=="izquierda":
